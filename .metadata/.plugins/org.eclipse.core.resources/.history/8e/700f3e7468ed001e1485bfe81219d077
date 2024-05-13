@@ -1,0 +1,10 @@
+package test;
+
+public class test1 {
+	public static void main(String[] args) {
+	// for 문을 이용해서 1~10까지 순서대로 출력하시오.
+		for (int i=1; i<11; i++) {
+			System.out.print(i+1+"\t");
+		}//for
+	}//class
+}//class

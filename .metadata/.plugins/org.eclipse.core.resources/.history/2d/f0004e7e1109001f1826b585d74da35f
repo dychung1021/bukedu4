@@ -1,0 +1,15 @@
+package collection;
+
+import java.awt.List;
+
+public class Sample2 {
+	public static void main(String[] args){
+		List L = new ArrayList();
+		L.add("가");
+		L.add("나");
+		L.add("다");
+		L.add("라");
+		System.out.
+		println(L);
+	}
+}

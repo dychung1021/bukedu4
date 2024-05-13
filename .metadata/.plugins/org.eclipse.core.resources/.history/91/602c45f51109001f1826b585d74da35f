@@ -1,0 +1,19 @@
+package collection;
+
+import java.util.*;
+
+public class Sample2 {
+	public static void main(String[] args){
+		List L = new ArrayList();
+		L.add("가");
+		L.add("나");
+		L.add("다");
+		L.add("라");
+		System.out.println(L);
+		//반복문을 이용할 경우 .size()부분에 주의
+		for(int i=0;i<L.size();i++) {
+			System.out.println(L.get(i));
+			
+		}
+	}
+}

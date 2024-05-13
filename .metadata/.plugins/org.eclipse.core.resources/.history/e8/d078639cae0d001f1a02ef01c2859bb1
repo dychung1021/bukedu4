@@ -1,0 +1,21 @@
+package collection;
+import java.util.*;
+public class Sample5 {
+	public static void main(String[] args) {
+		//List : 순서 엄격, 중복 허락
+		//Set  : 순서 없음, 중복 불가
+		//Map  : 검색어(key)와 값(value)이 한쌍으로 저장되는 방법
+		//       데이터의 검색이 편해서 개발에 이용하기 좋음.
+		//		 순서는 존재하지 않고 value는 중복이 가능하지만 key는 중복될 수 없다.
+		Map m= new HashMap();
+		m.put("A",50);
+		m.put("C",70);
+		m.put("D",250);
+		m.put("B",150);
+		System.out.println(m);
+		m.put("E",50);//value는 중복 가능
+		m.put("B",99);//key는 중복되면 앞의 값이 소멸됨.
+		
+		System.out.println(m);
+	}
+}

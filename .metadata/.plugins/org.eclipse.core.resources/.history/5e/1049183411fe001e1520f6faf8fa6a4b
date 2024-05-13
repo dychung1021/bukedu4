@@ -1,0 +1,32 @@
+package Inter;
+
+public class Sample11 {
+	public static void main(String[] args) {
+		//익명 class : 일시적으로 크ㅡㄹ래스와 동일 기능을 수행할 수 있는 이름이 없는 클래스 생성
+		//통상적으로 인터페이스가 구현된 클래스를 대용하거나 추상클래스가 상속된 클래스를 대용할 때 사용 
+		//존재할 리 없는 인터페이스의 생성자를 똑같이 적우준 뒤 {}사이에 추상메서드의 몸통까지 구현
+		ITF11 i=new ITF11() {
+			public void 
+			
+		Test t=new Test();
+			t.method();
+		}
+	}//
+}//
+
+interface ITF11{
+//	ITF(){}; 객체가 아니므로 No필드 No생성자 No메서드
+	public static final int a=10;//상수임 int a=10;로 축약표기 가능
+	void run();//추상메서드는 가질 수 있다.{}가 없는 
+}
+
+interface INTER11{
+	
+	
+}
+
+class Test{
+	void method(ITF11 i) {
+		System.out.println("실행성공");
+	}
+}

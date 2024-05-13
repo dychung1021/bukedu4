@@ -1,0 +1,30 @@
+package close;
+
+import java.sql.*;//Connection, sStatement, Resultset
+public class Sample2 {
+	public static void main(String[] args) {
+		Connection conn=null;
+		Statement stmt=null;
+		ResultSet rs=null;//오류 방지를 위해 기본값 넣어주기, close 처리를 위해 초기 오류방지
+		
+		String url="jdbc:mysql://127.0.0.1:3306/sample";
+		String db_id="iotiot";
+		String db_pw="iotiot";
+		String sql="select * from student";
+		try {
+			
+		}catch(Exception e){
+			System.out.println("접속 중 오류 발생 : "+e);
+		}finally {//무조건 실행되는 사항, 회선 종료처리, 이것도 try - catch 처리해야 함.
+			//여는 순서는 Connection->Statement->Resultset 닫는 순서는 Resultset->Statement->Connection
+			try {
+				if (rs!=null)rs.close();   // 닫는 순서 여는 순서 지킬 것.
+				if (stmt!=null)stmt.close();
+				if (conn!=null)conn.close();
+				
+			}catch(Exception ex){
+				System.out.println("접속 해제 중 오류발생"+ex);
+			}//catch
+		}//finally
+	}//main
+}//Sample

@@ -1,0 +1,34 @@
+package collection;
+	import java.util.*;
+	
+public class Sample1 {
+	public static void main(String[] args) {
+	// 리스트 : 순서가 엄격하게 부여된 집합 데이터, 순번(index)이 검색의 기준점이다
+	//        기준점이 존재하므로 중복 데이터를 허용
+	// java collection은 interface이기 때문에 직접 객체로 제작할 수 없고
+	// implements로 되어있는 class를 객체로 조립하여 사용
+		
+	//	List L = new List(); 이렇게 사용할 수 없다. 
+		List L = new ArrayList(); // ArrayList는 class임
+		L.add("홍길동");
+		L.add("이영준");
+		L.add("김철수");
+		L.add(1,"김붑붑");//1의 자리에 김붑붑을 추가
+		System.out.println(L);
+		
+		List L2 = new ArrayList();
+		L2.add("A");
+		L2.add("B");
+		L2.add("C");
+		System.out.println(L);
+		System.out.println(L2);
+		
+		L.addAll(2,L2);
+		System.out.println(L);
+		L.add(L2);
+
+		System.out.println(L);
+	}
+}
+
+	

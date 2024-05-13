@@ -1,0 +1,43 @@
+package collection;
+import java.util.*;
+public class Sample5 {
+	public static void main(String[] args) {
+		//List : 순서 엄격, 중복 허락
+		//Set  : 순서 없음, 중복 불가
+		//Map  : 검색어(key)와 값(value)이 한쌍으로 저장되는 방법
+		//       데이터의 검색이 편해서 개발에 이용하기 좋음.
+		//		 순서는 존재하지 않고 value는 중복이 가능하지만 key는 중복될 수 없다.
+		//Map.put(key, value); key와 value를 한쌍으로 묶어 데이터 입력
+		//Map.get(key)       : 검색어를 기준으로 해당하는 value를 출력
+		Map<String, Integer> m= new HashMap<String, Integer>();//제너릭지정시 두개를 지정해야 함.
+		m.put("A",50);
+		m.put("C",70);
+		m.put("D",250);
+		m.put("B",150);
+		System.out.println(m);
+		m.put("E",50);//value는 중복 가능
+		m.put("B",99);//key는 중복되면 앞의 값이 소멸됨.
+		
+		System.out.println(m);
+		
+		System.out.println(m.get("B"));
+		// Map을 for 문으로 운행하기 위해서는 key들이 들어가 있는  Set을 추출한 뒤에 사용하여야 한다.
+		
+		Map<String, Student> mm=new HashMap<String, Student>();
+		mm.put("B", new Student("김철수", 105));
+		mm.put("A", new Student("이영준", 115));
+		mm.put("C", new Student("홍길동", 15));
+		mm.put("D", new Student("김북부", 500));
+System.out.println(m);
+		
+		System.out.println(m.get("B"));
+	}
+}
+class Student{
+	String name;
+	int number;
+	Student(String a, int b){
+		name=a;
+		number=b;
+	}
+}

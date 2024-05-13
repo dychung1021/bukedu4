@@ -1,0 +1,15 @@
+package server;
+import java.net.*;//network 연결용 class 포함
+import java.io.*;
+
+public class WebServer {
+	public static void main(String[] args) {
+		try {
+		ServerSocket srvr = new ServerSocket(1234);
+		System.out.println("서버정보"+srvr.getInetAddress().getLocalHost());
+		}catch(Exception e) {
+			
+		};//try-catch
+	}//main
+
+}

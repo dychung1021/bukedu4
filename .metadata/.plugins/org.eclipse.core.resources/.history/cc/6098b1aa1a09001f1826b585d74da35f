@@ -1,0 +1,17 @@
+package collection;
+
+import java.util.*;
+
+public class Sample4 {
+	public static void main(String[] args) {
+		List<String> L= new ArrayList<String>();
+		L.add("IOT");
+		L.add("JAVA");
+		L.add("HTML");
+		L.add("CSS");
+		L.add("SQL");
+		L.add("JSP");
+		System.out.println(L);
+	}
+
+}

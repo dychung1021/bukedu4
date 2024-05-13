@@ -1,0 +1,14 @@
+package generic;
+
+public class Sanple3 {
+	public static void main(String[] args) {
+		//제네릭 : 클래스의 특정문자를 원하는 타입으로 변환한는 기법
+		//자료형을 마음대로 조절할 수 있어서 편리
+		Normal n = new Normal();
+		n.a = 15;
+	}
+
+}
+class Normal{
+	String a;
+}

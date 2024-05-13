@@ -1,0 +1,24 @@
+package server;
+import java.net.*;//network 연결용 class 포함
+import java.io.*;
+
+public class WebServer {
+	public static void main(String[] args) {
+		try {
+			ServerSocket srvr = new ServerSocket(1234);//서버 내의 포트번호
+			System.out.println("서버정보"+srvr.getInetAddress().getLocalHost());
+			System.out.println("클라이언트 접속 대기중 ''''");
+			while(true) {
+				Socket socket=srvr.accept();
+				System.out.println("클라이언트 접속 확인!");
+				BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream)));//Scanner와 동일 기능 & 
+				BufferedReader out;
+			}//while
+		}catch(Exception e) {
+			System.out.println("서버가동중 오류발생"+e);
+		};//try-catch
+		
+	}//main
+}
+
+

@@ -1,0 +1,8 @@
+package conn;
+import java.sql.*;//sql을 이용할 때 필요한 데이터 규격들이 들어 있어요
+public class Sample1 {
+	public static void main(String[] args) {
+		//jdbc가 있어야 데이터베이스와 통신이 가능하다.
+	}
+
+}

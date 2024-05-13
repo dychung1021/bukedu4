@@ -1,0 +1,37 @@
+package conn;
+import java.sql.*;//sql을 이용할 때 필요한 데이터 규격들이 들어 있어요
+public class Sample1 {
+	public static void main(String[] args) {
+		//jdbc가 있어야 데이터베이스와 통신이 가능하다.
+		Connection conn;	//접속회선
+		Statement stmt;		//쿼리문을 전송하기 위한 규격
+		ResultSet rs;		//Select문의 결과를 받아오기 위한 규격
+		
+		String url="jdbc:mysql://127.0.0.1:3306/sample";//접속위치 db 이름 지정해야 함.
+		String db_id="root";//별도의 id를 받아 놓지 않았으므로 최상위 
+		String db_pw="iotiot";
+		String sql="select * from student";
+		
+		try {
+			conn=DriverManager.getConnection(url,db_id,db_pw);//회선을 가져옴.
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			System.out.println("접속 이상없음!");
+//			System.out.println(rs);
+			for(int i=1;i<=6;i++) {
+			rs.next();// 한줄의 데이터를 읽어 오는 명령어
+			int num=rs.getInt(1);//resultSet에서는 1부터 indexing
+//			System.out.println(num);
+			String name=rs.getString(2);
+			int kor=rs.getInt(3);
+			int math=rs.getInt(4);
+			int eng=rs.getInt(5);
+			int sum=rs.getInt(6);
+			System.out.println(num+" "+name+" "+kor+" "+math+" "+eng+" "+sum);
+			};
+		}catch(Exception e) {
+			System.out.println("접속 중 오류 발생 :" +e);
+	}
+
+}
+}

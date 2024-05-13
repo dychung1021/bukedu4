@@ -1,0 +1,26 @@
+package collection;
+
+import java.util.*;
+
+public class Sample4 {
+	public static void main(String[] args) {
+		List<String> L= new ArrayList<String>();
+		L.add("IOT");
+		L.add("JAVA");
+		L.add("HTML");
+		L.add("CSS");
+		L.add("SQL");
+		L.add("JSP");
+		System.out.println(L);
+		
+		L.add(4, "JavaScript");
+		System.out.println(L);
+		//List.subList(start, end); 해당 index 범위 내의 내용물을 별도의 리스트로 추출
+		
+		List<String> sub = new ArrayList<String>();
+		sub=L.subList(2,4);
+		System.out.println(sub);
+		
+	}
+
+}

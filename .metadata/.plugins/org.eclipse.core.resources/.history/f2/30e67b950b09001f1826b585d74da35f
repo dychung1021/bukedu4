@@ -1,0 +1,19 @@
+package collection;
+import java.util.*;
+public class Sample1 {
+	public static void main(String[] args) {
+	// collection
+	// 자료구조에 이용할 수 있는 일정의 프레임워크 사용방법이 정해져 있음.
+	// interface 로 만들어져 있음. 메서드, 필드, 생성자 없음. 객체로 조립되지 않으며 추상메서드는 있다.
+	// java collection의 종류
+		// list : 순서가 엄격히 존재하는 자료형, index가 검색의 기준이자 순서
+			// Vector, Stack, LinkedList, *ArrayList가 있음.
+		// set  : 순서가 존재하지 않는 자료형, 자료의 구별이 불가능하기 때문에 중복디애터를 허락하지 않음
+			// HashSet, SortedSet, TreeSet등이 있다.
+		// Map : 겅색어와 데이터가 한 쌍으로 이루어진 자료형, 데이터는 중복이 가능하지만 검색어는 중복이 불가능
+		
+	// java collection은 interface로 구성되어 있어 바로 객체로 조립하여 사용할 수 없다. 다음 문장은 오류
+//		List = new List();
+		List L = new ArrayList();
+	}//main
+}//sample1

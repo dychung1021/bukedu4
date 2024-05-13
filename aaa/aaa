@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Cal{
+	public static void main(String[] args{
+		Scanner sc;
+		sc=new Scanner(System.in);
+		
+		System.out.println("첫번째 숫자를 입력해 주세요");
+		int a=sc.nextInt();
+		System.out.println("두번째 숫자를 입력해 주세요");
+		int b=sc.nextInt();
+		System.out.println("입력된 수는 "+a+","+b+"입니다);
+		int a=sc.nextInt();
+		System.out.println("첫번째 숫자를 입력해 주세요");
+		int a=sc.nextInt();
